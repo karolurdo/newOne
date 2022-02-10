@@ -1,6 +1,8 @@
 const input = document.querySelector("input");
 const passwords = ["admin", "user"];
 const messages = ["correct", "hello"];
+const badMessage = "wronge password"; 
+
 
 const showMessage = (e) => {
     passwords.forEach((item, index) => {
