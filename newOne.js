@@ -10,7 +10,7 @@ const showMessage = (e) => {
         if (item.toLowerCase() === e.target.value.toLowerCase()){ //dont check Lower Upper Case
             //console.log("work");
             document.querySelector("div").textContent = messages[index]; // show message
-            
+            e.target.value = "" // hide passowrd if correct
         }
     })
 }
