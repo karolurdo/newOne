@@ -1,17 +1,14 @@
 const input = document.querySelector("input");
 const passwords = ["admin", "user"];
 const messages = ["correct", "hello"];
-const badMessage = "wrong password";
 
-input.addEventListener("input", (e) =>{
-
-    const text = e.target.value;
-    document.querySelector('div').textContent=badMessage;
-    
-passwords.forEach(password, index) => {
-    if (password === text) {
-       console.log(password, index);
-    }}})
+const showMessage = (e) => {
+    passwords.forEach((item) => {
+        if (item.toLowerCase() === e.target.value.toLowerCase()){ //dont check Lower Upper Case
+            console.log("work");
+        }
+    })
+}
 
 
-
+input.addEventListener("input", showMessage);
